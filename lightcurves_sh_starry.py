@@ -89,7 +89,7 @@ def sh_lcs(t0=0,per=2.21857567,inc=85.71,ecc=0.0,w=90,rp=0.155313,a=8.863,ntimes
 			if starry.__version__ >= '1.0':
 				planet.map[l,m]=-1.0
 			else:
-				planet[l,m]=-1000.0
+				planet[l,m]=1.0
 			
 			SHcurves[shi,:] = make_lc(star,planet,time)
 			
@@ -101,7 +101,7 @@ def sh_lcs(t0=0,per=2.21857567,inc=85.71,ecc=0.0,w=90,rp=0.155313,a=8.863,ntimes
 			if starry.__version__ >= '1.0':
 				planet.map[l,m]=1.0
 			else:
-				planet[l,m] = 1000.0
+				planet[l,m] = 1.0
 			
 			SHcurves[shi,:] = make_lc(star,planet,time)
 			#flux_star, temp = system.flux(time, total=False)
